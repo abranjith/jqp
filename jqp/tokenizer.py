@@ -22,7 +22,7 @@ class TokenName(Enum):
         if not name:
             return TokenName.NONE
         name = name.strip().upper()
-        #special handling gor key
+        #special handling for key
         if name.endswith("_KEY"):
             return TokenName.KEY
         value = TokenName.__members__.get(name)
@@ -64,6 +64,7 @@ def get_grouped_tokens(jq_expression):
             group.append(t)
     yield group
 
+#test :-)
 if __name__ == "__main__":
     e = ".e1.e2[0][-1].e21.e3[1]"
     for t in get_jq_tokens(e):

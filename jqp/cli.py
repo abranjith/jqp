@@ -36,8 +36,8 @@ def jq_parser(json_obj, tokens):
     
     if(len(tokens) == 1):
         token = tokens[0]
-        retrieve_token_from_json(json_obj, token)
-
+        return retrieve_token_from_json(json_obj, token)
+    
     first_token = tokens[0]
     remaining_tokens = tokens[1:]
 
